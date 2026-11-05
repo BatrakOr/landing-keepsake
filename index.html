@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keepsake — digital &amp; branding agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- display=swap = font-display: swap -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Dancing+Script:wght@700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+<!-- Inline SVG sprite -->
+<svg width="0" height="0" style="display:none" aria-hidden="true">
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.800-8 11-8 11z" fill="currentColor"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 5h18v14H3zM3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.500"/></symbol>
+  <symbol id="i-burger" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <!-- CHECK: service icons are simplified placeholders, take real ones from Figma -->
+  <symbol id="i-svc" viewBox="0 0 40 40"><rect x="6" y="10" width="28" height="20" fill="#5b7a8c"/><rect x="10" y="14" width="20" height="12" fill="#cfe3ee"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="container header__in">
+    <a class="logo" href="#top" aria-label="Keepsake — home"><span class="logo__k">K</span><span class="logo__t">eepsake</span></a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" tabindex="-1">
+    <!-- CHECK: spec wants <button aria-expanded>. Without JS aria-expanded can't change,
+         so this is a label with role=button; aria-expanded is static -->
+    <label class="burger" for="nav-toggle" role="button" tabindex="0" aria-label="Toggle menu" aria-controls="menu" aria-expanded="false">
+      <svg class="burger__open" width="24" height="24"><use href="#i-burger"/></svg>
+      <svg class="burger__close" width="24" height="24"><use href="#i-close"/></svg>
+    </label>
+
+    <nav class="nav" id="menu" aria-label="Main">
+      <ul class="nav__list">
+        <li><a href="#top" aria-current="page">Home</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#works">Our works</a></li>
+        <li><a href="#journal">Journal</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav__mobile">
+        <a class="btn" href="#contact">Contact us</a>
+        <a class="btn btn--ghost" href="#favourites">Favourites</a>
+        <address class="nav__contacts">
+          <!-- CHECK: contacts text in the open menu is made up -->
+          hello@keepsake.studio<br>+44 20 7946 0000
+        </address>
+        <div class="social" aria-label="Social networks">
+          <a href="#" aria-label="RSS" style="--c:#f59b2b">r</a><a href="#" aria-label="Facebook" style="--c:#3b5bb5">f</a><a href="#" aria-label="Twitter" style="--c:#1fb6e6">t</a><a href="#" aria-label="Dribbble" style="--c:#ea4c89">d</a><a href="#" aria-label="Pinterest" style="--c:#e2434b">p</a>
+        </div>
+      </div>
+    </nav>
+
+    <a class="fav" id="favourites" href="#favourites" aria-label="Favourites"><svg width="16" height="16"><use href="#i-heart"/></svg></a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container">
+      <h1 id="hero-title">We're Keepsake, a digital &amp; branding agency</h1>
+      <p>Specializing in web design, poster, motion video, based in London. We love to turn ideas into beautiful things.</p>
+      <div class="hero__btns">
+        <a class="btn" href="#works">See our works</a>
+        <a class="btn btn--ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="works" id="works" aria-labelledby="works-title">
+    <div class="container">
+      <div class="filter">
+        <h2 id="works-title" class="h2">Our awesome works</h2>
+        <input type="radio" name="f" id="f-all" checked>
+        <input type="radio" name="f" id="f-branding">
+        <input type="radio" name="f" id="f-identity">
+        <input type="radio" name="f" id="f-print">
+        <input type="radio" name="f" id="f-web">
+        <input type="radio" name="f" id="f-motion">
+
+        <div class="chips">
+          <label class="chip" for="f-all">All</label>
+          <label class="chip" for="f-branding">Branding</label>
+          <label class="chip" for="f-identity">Identity</label>
+          <label class="chip" for="f-print">Print</label>
+          <label class="chip" for="f-web">Web</label>
+          <label class="chip" for="f-motion">Motion</label>
+        </div>
+
+    
+        <ul class="grid">
+          <li class="card" data-category="branding"><a href="#works"><img class="tile" src="B:\Web-tech\lab7\lab7(4)\src\mock-up-tag-normal-one.jpg" width="400" height="316" alt="Mock-up tag" style="--c:#8fd3c8"><span class="over"><span class="plus"><svg width="18" height="18"><use href="#i-plus"/></svg></span><span class="over__t">Mock-up tag</span><span class="over__c">Branding</span></span></a></li>
+          <li class="card" data-category="print"><a href="#works"><img class="tile" src="B:\Web-tech\lab7\lab7(4)\src\piece-paper.jpg" width="400" height="316" alt="Piecepaper" style="--c:#ececec"><span class="over"><span class="plus"><svg width="18" height="18"><use href="#i-plus"/></svg></span><span class="over__t">Piecepaper</span><span class="over__c">Print</span></span></a></li>
+          <li class="card" data-category="motion"><a href="#works"><img class="tile" src="B:\Web-tech\lab7\lab7(4)\src\gray-with-disk.jpg" width="400" height="316" alt="Disc" style="--c:#4a4a55"><span class="over"><span class="plus"><svg width="18" height="18"><use href="#i-plus"/></svg></span><span class="over__t">Disc</span><span class="over__c">Motion</span></span></a></li>
+          <li class="card" data-category="print"><a href="#works"><img class="tile" src="B:\Web-tech\lab7\lab7(4)\src\vol-16.jpg" width="400" height="316" alt="Vol. 16" loading="lazy" style="--c:#a89279"><span class="over"><span class="plus"><svg width="18" height="18"><use href="#i-plus"/></svg></span><span class="over__t">Vol. 16</span><span class="over__c">Print</span></span></a></li>
+          <li class="card" data-category="web"><a href="#works"><img class="tile" src="B:\Web-tech\lab7\lab7(4)\src\post-2.png" width="400" height="316" alt="Profile UI" loading="lazy" style="--c:#22252b"><span class="over"><span class="plus"><svg width="18" height="18"><use href="#i-plus"/></svg></span><span class="over__t">Profile UI</span><span class="over__c">Web</span></span></a></li>
+          <li class="card" data-category="identity"><a href="#works"><img class="tile" src="B:\Web-tech\lab7\lab7(4)\src\pink-with-book.jpg" width="400" height="316" alt="Paper stack" loading="lazy" style="--c:#e8a898"><span class="over"><span class="plus"><svg width="18" height="18"><use href="#i-plus"/></svg></span><span class="over__t">Paper stack</span><span class="over__c">Identity</span></span></a></li>
+          <li class="card" data-category="branding"><a href="#works"><img class="tile" src="B:\Web-tech\lab7\lab7(4)\src\wallst.jpg" width="400" height="316" alt="WallSt." loading="lazy" style="--c:#d8d5d0"><span class="over"><span class="plus"><svg width="18" height="18"><use href="#i-plus"/></svg></span><span class="over__t">WallSt.</span><span class="over__c">Branding</span></span></a></li>
+          <li class="card" data-category="identity"><a href="#works"><img class="tile" src="B:\Web-tech\lab7\lab7(4)\src\john-doe-design.jpg" width="400" height="316" alt="John Doe" loading="lazy" style="--c:#f2b6bd"><span class="over"><span class="plus"><svg width="18" height="18"><use href="#i-plus"/></svg></span><span class="over__t">John Doe</span><span class="over__c">Identity</span></span></a></li>
+          <li class="card" data-category="print"><a href="#works"><img class="tile" src="B:\Web-tech\lab7\lab7(4)\src\seal-fabric.jpg" width="400" height="316" alt="Seal Fabric" loading="lazy" style="--c:#3b4a5e"><span class="over"><span class="plus"><svg width="18" height="18"><use href="#i-plus"/></svg></span><span class="over__t">Seal Fabric</span><span class="over__c">Print</span></span></a></li>
+        </ul>
+      </div>
+      <p class="more"><a class="btn btn--ghost" href="#works">Load more works</a></p>
+    </div>
+  </section>
+
+  <section class="cta" id="contact" aria-labelledby="cta-title">
+    <div class="container">
+      <h2 id="cta-title" class="cta__t">Would you love to work with us?</h2>
+      <a class="btn" href="mailto:hello@keepsake.studio"><svg width="14" height="14"><use href="#i-mail"/></svg> Contact us</a>
+    </div>
+  </section>
+
+  <section class="services" id="about" aria-labelledby="svc-title">
+    <div class="container">
+      <h2 id="svc-title" class="h2">What do we do</h2>
+      <p class="lead">We are a small team of designers and makers who help brands look their best online and offline.</p>
+      <ul class="svc">
+        <li><span class="svc__i"><svg width="40" height="40"><use href="#i-svc"/></svg></span><h3>Web design</h3><p>Responsive sites and product interfaces that look sharp on every screen.</p></li>
+        <li><span class="svc__i"><svg width="40" height="40"><use href="#i-svc"/></svg></span><h3>Motion video</h3><p>Explainers, logo animations and social clips that bring brands to life.</p></li>
+        <li><span class="svc__i"><svg width="40" height="40"><use href="#i-svc"/></svg></span><h3>Print design</h3><p>Posters, packaging and stationery prepared to be printed right.</p></li>
+        <li><span class="svc__i" style="color:#f95858"><svg width="40" height="40"><use href="#i-heart"/></svg></span><h3>Illustration</h3><p>Custom illustrations and icon sets in a style that is yours alone.</p></li>
+      </ul>
+      <ul class="stats">
+        <li><b>120+</b><span>Projects done</span></li>
+        <li><b>8</b><span>Years in craft</span></li>
+        <li><b>64</b><span>Happy clients</span></li>
+        <li><b>15</b><span>Design awards</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="clients" aria-labelledby="cl-title">
+    <div class="container">
+      <h2 id="cl-title" class="h2">Clients &amp; kind words</h2>
+      <p class="lead">Some of the teams that trusted us with their brands.</p>
+
+      <ul class="logos">
+        <li style="font-weight:700;letter-spacing:2px">NORDLY</li>
+        <li style="font-weight:300">Halcyon</li>
+        <li style="font-weight:300;letter-spacing:2px">ARCO</li>
+        <li style="font-weight:700">pinewood</li>
+        <li style="font-weight:700;letter-spacing:2px">VELA</li>
+        <li style="font-weight:300">ostra</li>
+      </ul>
+      <figure class="quote">
+        <svg class="quote__m" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18v-6c0-4 2-6 6-7v3c-2 .5-3 2-3 4h3v6zm10 0v-6c0-4 2-6 6-7v3c-2 .5-3 2-3 4h3v6z" fill="currentColor"/></svg>
+        <blockquote><p>Keepsake turned a vague brief into a brand we are proud of. The team was fast, honest about trade-offs and obsessed with the details.</p></blockquote>
+        <figcaption>
+          <span class="avatar" aria-hidden="true">OM</span>
+          <span><b>Olena Marchenko</b><small>Marketing Lead, Nordly</small></span>
+          <span class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="journal" id="journal" aria-labelledby="j-title">
+    <div class="container">
+      <h2 id="j-title" class="h2">From the journal</h2>
+      <p class="lead">Notes on process, case studies and things that inspire us.</p>
+      <div class="posts">
+        
+        <article class="post"><img class="post__img" src="B:\Web-tech\lab7\lab7(4)\src\post-1.png" width="150" height="150" alt="" loading="lazy" style="--c:#5a463a"><div><p class="meta">Oct 12, 2026 / Identity</p><h3>Sollicitudin tortor inceptos</h3><p>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes.</p><a class="more-l" href="#journal">Read more</a></div></article>
+        <article class="post"><img class="post__img" src="B:\Web-tech\lab7\lab7(4)\src\post-2.png" width="150" height="150" alt="" loading="lazy" style="--c:#454b5c"><div><p class="meta">Oct 23, 2026 / Branding</p><h3>Amet inceptos fringilla fusce</h3><p>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes.</p><a class="more-l" href="#journal">Read more</a></div></article>
+        <article class="post"><img class="post__img" src="B:\Web-tech\lab7\lab7(4)\src\post-3.png" width="150" height="150" alt="" loading="lazy" style="--c:#6fb9d3"><div><p class="meta">Sep 19, 2026 / Identity</p><h3>Cursus malesuada justo</h3><p>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes.</p><a class="more-l" href="#journal">Read more</a></div></article>
+        <article class="post"><img class="post__img" src="B:\Web-tech\lab7\lab7(4)\src\post-4.png" width="150" height="150" alt="" loading="lazy" style="--c:#2a2a2c"><div><p class="meta">Sep 21, 2026 / Branding</p><h3>Ornare cursus bibendum purus</h3><p>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes.</p><a class="more-l" href="#journal">Read more</a></div></article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="fcols">
+        <nav aria-label="Studio"><h2>Studio</h2><ul><li><a href="#about">About us</a></li><li><a href="#works">Our works</a></li><li><a href="#journal">Journal</a></li><li><a href="#top">Careers</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+        <nav aria-label="Services"><h2>Services</h2><ul><li><a href="#about">Web design</a></li><li><a href="#about">Motion video</a></li><li><a href="#about">Print design</a></li><li><a href="#about">Illustration</a></li><li><a href="#about">Brand strategy</a></li></ul></nav>
+      </div>
+
+      <div class="sub" id="subscribe">
+        <h2>Newsletter</h2>
+        <!-- No real sending: action="#subscribe" -> :target shows the success state -->
+        <form class="sub__form" action="#subscribe">
+          <p>Fresh case studies and design notes, once a month.</p>
+          <div class="sub__row">
+            <label class="vh" for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required aria-describedby="email-err">
+            <button class="btn" type="submit">Subscribe</button>
+          </div>
+          <p class="err" id="email-err">Enter a valid email address, like name@example.com.</p>
+          <label class="agree"><input type="checkbox" required> I agree to the privacy policy</label>
+        </form>
+        <p class="ok" role="status">Thank you! You're subscribed.</p>
+      </div>
+    </div>
+
+    <div class="footer__bot">
+      <p>© 2026 Keepsake. All rights reserved.</p>
+      <div class="social" aria-label="Social networks">
+        <a href="#" aria-label="RSS" style="--c:#f59b2b">r</a><a href="#" aria-label="Facebook" style="--c:#3b5bb5">f</a><a href="#" aria-label="Twitter" style="--c:#1fb6e6">t</a><a href="#" aria-label="Dribbble" style="--c:#ea4c89">d</a><a href="#" aria-label="Pinterest" style="--c:#e2434b">p</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a class="up" href="#top" aria-label="Back to top"><svg width="20" height="20"><use href="#i-up"/></svg></a>
+</body>
+</html>
